@@ -75,6 +75,22 @@ table {
     min-height: 94vh;                  /* Take full viewport height */
 }
 
+#pre1 {
+    display: flex;                     /* Enable Flexbox */
+    flex-direction: column;            /* Stack children vertically */
+    justify-content: center;           /* Vertically center the content */
+    align-items: center;               /* Horizontally center the content */
+    /* Background Gradient + Image */
+    background-image: 
+        -webkit-linear-gradient(top, rgba(234, 234, 238, 0.95), rgba(23, 24, 32, 0.05)), 
+        url('images/t1.png');      /* Set your image URL */
+    background-size: cover;            /* Ensure the image covers the entire section */
+    background-position: center;       /* Keep the image centered */
+    background-repeat: no-repeat;      /* Prevent tiling of the image */
+    padding: 50px 0;                   /* Optional: Add padding */
+    min-height: 94vh;                  /* Take full viewport height */
+}
+
 
 
 
@@ -2290,6 +2306,21 @@ input[type="button4"],
 		z-index: 1;
 	}
 
+	.goto-next1 {
+		border: 0;
+		bottom: 0;
+		display: block;
+		height: 5em;
+		left: 80%;
+		margin: 0 0 0 -5em;
+		overflow: hidden;
+		position: absolute;
+		text-indent: 10em;
+		white-space: nowrap;
+		width: 10em;
+		z-index: 1;
+	}
+
 		.goto-next:before {
 			background-image: url("images/arrow.svg");
 			background-position: center center;
@@ -2431,7 +2462,7 @@ input[type="button4"],
 			position: absolute;
 		}
 
-		.spotlight .goto-next {
+		.spotlight .goto-next1 {
 			-moz-transform: translate(0,0);
 			-webkit-transform: translate(0,0);
 			-ms-transform: translate(0,0);
@@ -3287,7 +3318,7 @@ body {
 							padding-left: 0;
 						}
 
-				.spotlight .goto-next {
+				.spotlight .goto-next1 {
 					display: none;
 				}
 
@@ -3303,7 +3334,7 @@ body {
 				background-attachment: scroll;
 			}
 
-				#banner .goto-next {
+				#banner .goto-next1 {
 					height: 7em;
 				}
 
@@ -4520,4 +4551,28 @@ h2 {
 .project-card a:hover {
 	background-color: #d0c4d0;
 }
+
+.icon.major.text-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5em;              /* slightly smaller than 6em */
+  height: 3.5em;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2e3327;
+  font-size: 1.8em;        /* smaller text to match icon glyph size */
+  font-weight: 700;
+  line-height: normal;
+  text-shadow: 1px 0 0 #ffffff, -1px 0 0 #ffffff,
+               0 1px 0 #ffffff, 0 -1px 0 #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin: 0 0 1em 0;       /* same as other icons */
+}
+
+.icon.major.text-icon:hover {
+  transform: scale(1.2);
+}
+
 
